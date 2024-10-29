@@ -159,3 +159,16 @@ h1 {
   max-width: 86px;
   margin-top: 16px;
 }
+
+/* task-5 */
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
