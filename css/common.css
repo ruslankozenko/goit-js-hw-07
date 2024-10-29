@@ -172,3 +172,29 @@ h1 {
   margin-bottom: 16px;
   font-size: 16px;
 }
+
+/* task-6 */
+
+#controls {
+  display: flex;
+  gap: 16px;
+}
+
+#controls input {
+  min-width: 150px;
+}
+
+button[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+button[data-destroy]:hover {
+  background-color: #ff7070;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px;
+}
