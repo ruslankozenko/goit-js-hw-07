@@ -59,7 +59,7 @@ ol {
   margin-bottom: 8px;
 }
 
-/* task 2 */
+/* task-2 */
 
 .gallery {
   display: flex;
@@ -76,3 +76,29 @@ ol {
   width: 300px;
 }
 
+/* task-3 */
+
+#name-input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding-left: 16px;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
