@@ -1,11 +1,11 @@
 'use strict';
 
-const input = document.getElementById('#name-input');
-const output = document.getElementById('#name-output');
+const input = document.getElementById('name-input');
+const output = document.getElementById('name-output');
 
-    nameInput.addEventListener('input', () => {
+    input.addEventListener('input', () => {
         
-    const inputValue = nameInput.value.trim();
+    const inputValue = input.value.trim();
       
-    nameOutput.textContent = inputValue.length > 0 ? inputValue : 'Anonymous';
+    output.textContent = inputValue.length > 0 ? inputValue : 'Anonymous';
 });

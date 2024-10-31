@@ -13,15 +13,18 @@ const containerEl = document.getElementById("boxes");
 
 function createBoxes(amount) {
   containerEl.innerHTML = "";
+  const fragment = document.createDocumentFragment();
   let side = 30;
   for (let i = 1; i <= amount; i += 1) {
     const newBox = document.createElement("div");
     newBox.style.width = `${side}px`;
     newBox.style.height = `${side}px`;
     newBox.style.backgroundColor = getRandomHexColor();
-    containerEl.append(newBox);
+    fragment.append(newBox);
     side += 10;
   }
+
+  containerEl.append(fragment);
 }
 
 function destroyBoxes() {
@@ -31,9 +34,19 @@ function destroyBoxes() {
 
 btnCreate.addEventListener("click", () => {
   inputEl.focus();
-  if (inputEl.value > 0 && inputEl.value <= 100) {
-    createBoxes(inputEl.value);
+  const amount = parseInt(inputEl.value, 10);
+  if (amount > 0 && amount <= 100) {
+    createBoxes(amount);
   }
   inputEl.value = "";
 });
 btnDestroy.addEventListener("click", destroyBoxes);
+
+
+
+
+
+
+
+
+
