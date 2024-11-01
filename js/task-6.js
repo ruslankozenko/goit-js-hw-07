@@ -12,19 +12,19 @@ const btnDestroy = document.querySelector("[data-destroy]");
 const containerEl = document.getElementById("boxes");
 
 function createBoxes(amount) {
-  containerEl.innerHTML = "";
-  const fragment = document.createDocumentFragment();
+  const boxes = [];
   let side = 30;
   for (let i = 1; i <= amount; i += 1) {
     const newBox = document.createElement("div");
     newBox.style.width = `${side}px`;
     newBox.style.height = `${side}px`;
     newBox.style.backgroundColor = getRandomHexColor();
-    fragment.append(newBox);
+    newBox.style.margin = '5px'; 
+    boxes.push(newBox);
     side += 10;
   }
 
-  containerEl.append(fragment);
+  containerEl.append(...boxes);
 }
 
 function destroyBoxes() {
@@ -37,9 +37,12 @@ btnCreate.addEventListener("click", () => {
   const amount = parseInt(inputEl.value, 10);
   if (amount > 0 && amount <= 100) {
     createBoxes(amount);
+  } else {
+    alert("Please enter a number between 1 and 100.");
   }
   inputEl.value = "";
 });
+
 btnDestroy.addEventListener("click", destroyBoxes);
 
 
